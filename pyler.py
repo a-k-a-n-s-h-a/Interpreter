@@ -7,12 +7,7 @@ class Token(object):
         self.value = value
 
     def __str__(self):
-        """String representation of the class instance.
-
-        Examples:
-            Token(INTEGER, 3)
-            Token(PLUS '+')
-        """
+    
         return 'Token({type}, {value})'.format(
             type=self.type,
             value=repr(self.value)
@@ -103,7 +98,7 @@ class Interpreter(object):
 def main():
     while True:
         try:
-            text = input('Interpreter >')
+            text = input('pyler >')
         except EOFError:
             break
         if not text:
